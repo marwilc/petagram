@@ -1,62 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.marwilc.petagram.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:textSize="@android:dimen/app_icon_size"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:text="Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328"
-        app:layout_constraintHorizontal_bias="0.467" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etUserName"
+                android:layout_alignStart="@+id/etUserName"
+                android:layout_below="@+id/etUserName"
+                android:layout_marginTop="26dp"
+                android:ems="10"
+                android:hint="@string/text_hint2"
+                android:inputType="textPassword"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="208dp" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:textColor="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Username"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="220dp" />
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLogin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="39dp"
+                android:ems="10"
+                android:hint="@string/text_hint1"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAccent"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="155dp" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:textColor="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="282dp" />
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgvNodeJs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:text="@string/text_title1"
+                android:textColor="@color/colorAccent"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.432" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="84dp"
-        android:layout_height="51dp"
-        android:background="@color/colorTextIcon"
-        android:text="Access"
-        android:textColor="@color/colorAccent"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="349dp" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_button_access"
+                android:theme="@style/MyButtonRaised"
+                tools:layout_editor_absoluteX="257dp"
+                tools:layout_editor_absoluteY="255dp"
+                android:layout_below="@+id/etPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="379dp"
-        android:layout_height="128dp"
-        app:srcCompat="@drawable/nodejs_new_pantone_black"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="5dp" />
+            <ImageView
+                android:id="@+id/imgvNodeJs"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                app:srcCompat="@drawable/nodejs_new_pantone_black"
+                tools:layout_editor_absoluteX="-2dp"
+                tools:layout_editor_absoluteY="3dp" />
 
-</android.support.constraint.ConstraintLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabMiFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_cake_white_48dp" />
+
+        </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

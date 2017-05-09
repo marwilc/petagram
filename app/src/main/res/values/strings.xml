@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Petagram</string>
+    <string name="text_button_access">Access</string>
+    <string name="text_title1">Login</string>
+    <string name="text_hint1">Username</string>
+    <string name="text_hint2">Password</string>
+    <string name="message">Hola :)</string>
+    <string name="textAction">Accion</string>
+    <string-array name="Languages">
+        <item>C++</item>
+        <item>Java</item>
+        <item>Phyton</item>
+        <item>JavaScript</item>
+        <item>NodeJS</item>
+        <item>Apache</item>
+    </string-array>
 </resources>
